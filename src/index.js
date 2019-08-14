@@ -20,6 +20,8 @@ d3.csv("./src/assets/output.csv").then(function (data) {
         arr.push(new_obj);
     })
 
+    
+
 
 });
 
