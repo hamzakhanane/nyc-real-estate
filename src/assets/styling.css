@@ -1,0 +1,13 @@
+.main-container{
+    display: flex;
+
+}
+
+.map-container{
+    width: 50%;
+    height: 100%;
+}
+.left-container{
+    width: 50%;
+    height: 100%;
+}

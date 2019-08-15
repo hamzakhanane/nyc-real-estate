@@ -42,6 +42,16 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     // window.initMap = () => {
 
+    // let bound = new google.maps.LatLngBounds();
+    // for (d in window.address_lat_lng ){
+    //     long = +window.address_lat_lng[d].long;
+    //     lat = +window.address_lat_lng[d].lat;
+    //     // bound.extend(new google.maps.LatLngBounds(lat,long));
+
+
+    // }
+
+
         map = new window.google.maps.Map(d3.select("#map").node(), {
             zoom: 12,
             center: { lat: 40.730610, lng: -73.935242 },
@@ -49,13 +59,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
         window.map = map;
         
     // }
+    //   map.fitBounds(bound);
     // window.initMap();
 
     d3.json('./properties2.json').then(function (error,data) {
         overlay = new google.maps.OverlayView();
-        debugger
+        // debugger
         overlay.onAdd = function () {
-            debugger
+            // debugger
             let layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "stations");
             // debugger
             overlay.draw = function () {
@@ -81,10 +92,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     .attr("x", padding + 7)
                     .attr("y", padding)
                     .attr("dy", ".31em")
-                    .text(function (d) { return d.key; });
+                
+                    .text(function (d) { 
+                        
+                        return d.key; });
                 
                 function transform(d) {
-                    debugger
+                    // debugger
                     d = new google.maps.LatLng(parseFloat(d.value.lat), parseFloat(d.value.long));
                     d = projection.fromLatLngToDivPixel(d);
                     // debugger
@@ -95,7 +109,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
             }
             // debugger
         }
-        debugger
+        // debugger
         overlay.setMap(map);
 
         
