@@ -1,0 +1,436 @@
+{"properties":[
+  {
+    "ADDRESS": "125 RIVINGTON STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "9800000",
+    "lat": "40.71951637",
+    "long": "-73.98722942"
+  },
+  {
+    "ADDRESS": "151 WEST 48TH   STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "13010500",
+    "lat": "40.75962489",
+    "long": "-73.98309587"
+  },
+  {
+    "ADDRESS": "3964 AMUNDSON AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "405000",
+    "lat": "40.8910611",
+    "long": "-73.8360134"
+  },
+  {
+    "ADDRESS": "3438 EDSON AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "599000",
+    "lat": "40.88002318",
+    "long": "-73.83883958"
+  },
+  {
+    "ADDRESS": "3318 HONE AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "104000",
+    "lat": "40.87343264",
+    "long": "-73.8571916"
+  },
+  {
+    "ADDRESS": "2145 MOHEGAN AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "371124",
+    "lat": "40.84693082",
+    "long": "-73.88243018"
+  },
+  {
+    "ADDRESS": "1491 JEROME AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "5000000",
+    "lat": "40.84211915",
+    "long": "-73.91691053"
+  },
+  {
+    "ADDRESS": "1491 JEROME AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "3500000",
+    "lat": "40.84211915",
+    "long": "-73.91691053"
+  },
+  {
+    "ADDRESS": "1979 MORRIS AVE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "445000",
+    "lat": "40.85138913",
+    "long": "-73.90754782"
+  },
+  {
+    "ADDRESS": "1456 LELAND AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "380000",
+    "lat": "40.83713679",
+    "long": "-73.86412145"
+  },
+  {
+    "ADDRESS": "2546 WESTERVELT AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "435000",
+    "lat": "40.8639375",
+    "long": "-73.83955102"
+  },
+  {
+    "ADDRESS": "5749 FARADAY AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "876000",
+    "lat": "40.90504007",
+    "long": "-73.89828091"
+  },
+  {
+    "ADDRESS": "2837 WELLMAN AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "310000",
+    "lat": "40.84158185",
+    "long": "-73.83564385"
+  },
+  {
+    "ADDRESS": "1125 THIERIOT AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "475000",
+    "lat": "40.82857861",
+    "long": "-73.86398355"
+  },
+  {
+    "ADDRESS": "1230 BEACH AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "500000",
+    "lat": "40.83089459",
+    "long": "-73.86584702"
+  },
+  {
+    "ADDRESS": "741 CALHOUN AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "550000",
+    "lat": "40.82609701",
+    "long": "-73.82503372"
+  },
+  {
+    "ADDRESS": "3930 EAST TREMONT AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1250000",
+    "lat": "40.82116072",
+    "long": "-73.81887204"
+  },
+  {
+    "ADDRESS": "8633 15TH AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "999000",
+    "lat": "40.61054622",
+    "long": "-74.0100053"
+  },
+  {
+    "ADDRESS": "413 MONROE STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "750000",
+    "lat": "40.68680355",
+    "long": "-73.94097045"
+  },
+  {
+    "ADDRESS": "288 QUINCY STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1260000",
+    "lat": "40.68684607",
+    "long": "-73.94958814"
+  },
+  {
+    "ADDRESS": "850 GREENE AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "140000",
+    "lat": "40.69012922",
+    "long": "-73.93408381"
+  },
+  {
+    "ADDRESS": "6616 CAMERON COURT",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "790000",
+    "lat": "40.6204278",
+    "long": "-73.99484892"
+  },
+  {
+    "ADDRESS": "2265 78 STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "990000",
+    "lat": "40.6056218",
+    "long": "-73.98733764"
+  },
+  {
+    "ADDRESS": "214 WYCKOFF STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "3200000",
+    "lat": "40.68396054",
+    "long": "-73.98606081"
+  },
+  {
+    "ADDRESS": "635 SACKMAN STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "350000",
+    "lat": "40.66208551",
+    "long": "-73.9026595"
+  },
+  {
+    "ADDRESS": "192 HERZL STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "680000",
+    "lat": "40.66535045",
+    "long": "-73.91479496"
+  },
+  {
+    "ADDRESS": "16 COVERT STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "550000",
+    "lat": "40.68512256",
+    "long": "-73.9131147"
+  },
+  {
+    "ADDRESS": "1165 EAST 88TH   STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "430000",
+    "lat": "40.63484866",
+    "long": "-73.90224886"
+  },
+  {
+    "ADDRESS": "640 EAST 86TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "505986",
+    "lat": "40.64062593",
+    "long": "-73.91181061"
+  },
+  {
+    "ADDRESS": "220 GREENE AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "140000",
+    "lat": "40.68695798",
+    "long": "-73.96228749"
+  },
+  {
+    "ADDRESS": "296 DEKALB AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "3108000",
+    "lat": "40.68936379",
+    "long": "-73.96678266"
+  },
+  {
+    "ADDRESS": "136 UNION STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "3600000",
+    "lat": "40.68389823",
+    "long": "-74.00208403"
+  },
+  {
+    "ADDRESS": "2008 MERMAID AVE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "570000",
+    "lat": "40.57611518",
+    "long": "-73.98714885"
+  },
+  {
+    "ADDRESS": "550 DREW STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "460000",
+    "lat": "40.67734469",
+    "long": "-73.86314553"
+  },
+  {
+    "ADDRESS": "903 PINE STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "675000",
+    "lat": "40.66287388",
+    "long": "-73.86755463"
+  },
+  {
+    "ADDRESS": "4110 HUBBARD PLACE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "380000",
+    "lat": "40.62491384",
+    "long": "-73.9351785"
+  },
+  {
+    "ADDRESS": "382 EAST 91ST STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "305000",
+    "lat": "40.65609239",
+    "long": "-73.92269251"
+  },
+  {
+    "ADDRESS": "306 CLERMONT AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "2250000",
+    "lat": "40.68869777",
+    "long": "-73.97028427"
+  },
+  {
+    "ADDRESS": "28 BAY 40TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "905000",
+    "lat": "40.59696471",
+    "long": "-73.98735008"
+  },
+  {
+    "ADDRESS": "1608 SHORE PARKWAY",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "224020",
+    "lat": "40.59366341",
+    "long": "-74.00065893"
+  },
+  {
+    "ADDRESS": "1608 SHORE PARKWAY",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "224020",
+    "lat": "40.59366341",
+    "long": "-74.00065893"
+  },
+  {
+    "ADDRESS": "1608 SHORE PARKWAY",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "224020",
+    "lat": "40.59366341",
+    "long": "-74.00065893"
+  },
+  {
+    "ADDRESS": "1608 SHORE PARKWAY",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "224020",
+    "lat": "40.59366341",
+    "long": "-74.00065893"
+  },
+  {
+    "ADDRESS": "83-97 APOLLO STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "10564030",
+    "lat": "40.72714748",
+    "long": "-73.93836227"
+  },
+  {
+    "ADDRESS": "2008 EAST 15TH   STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "820000",
+    "lat": "40.60070948",
+    "long": "-73.95693818"
+  },
+  {
+    "ADDRESS": "1651 EAST 35",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "480000",
+    "lat": "40.6149683",
+    "long": "-73.93806605"
+  },
+  {
+    "ADDRESS": "2064 EAST 35TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "596000",
+    "lat": "40.60793485",
+    "long": "-73.93097766"
+  },
+  {
+    "ADDRESS": "1490 EAST 21ST STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1775000",
+    "lat": "40.61692732",
+    "long": "-73.9539633"
+  },
+  {
+    "ADDRESS": "1473 EAST 5TH   STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1550000",
+    "lat": "40.61489044",
+    "long": "-73.96980566"
+  },
+  {
+    "ADDRESS": "1515 EAST 5TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1100000",
+    "lat": "40.61364425",
+    "long": "-73.96958651"
+  },
+  {
+    "ADDRESS": "917 FIRST COURT",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "800000",
+    "lat": "40.6047491",
+    "long": "-73.96275168"
+  },
+  {
+    "ADDRESS": "2012 EAST 52 STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "710700",
+    "lat": "40.61149567",
+    "long": "-73.92360135"
+  },
+  {
+    "ADDRESS": "2555 EAST 28TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "690000",
+    "lat": "40.59012426",
+    "long": "-73.9416212"
+  },
+  {
+    "ADDRESS": "2513 EAST 12 STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "927500",
+    "lat": "40.58927511",
+    "long": "-73.95819852"
+  },
+  {
+    "ADDRESS": "5-36 BEACH 68 STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "250000",
+    "lat": "40.59583942",
+    "long": "-73.79715448"
+  },
+  {
+    "ADDRESS": "348 BEACH 67 STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "202000",
+    "lat": "40.59246912",
+    "long": "-73.79578567"
+  },
+  {
+    "ADDRESS": "32-47 48TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1100000",
+    "lat": "40.75467769",
+    "long": "-73.91333078"
+  },
+  {
+    "ADDRESS": "210-24 33RD   AVENUE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "965000",
+    "lat": "40.77127651",
+    "long": "-73.77734099"
+  },
+  {
+    "ADDRESS": "38-25 215TH PLACE",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "690000",
+    "lat": "40.76648493",
+    "long": "-73.76798528"
+  },
+  {
+    "ADDRESS": "14-47 159TH STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "1510000",
+    "lat": "40.7876599",
+    "long": "-73.80296913"
+  },
+  {
+    "ADDRESS": "85-03 250TH   STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "297500",
+    "lat": "40.73321264",
+    "long": "-73.71634418"
+  },
+  {
+    "ADDRESS": "115-112 226 STREET",
+    "SALEDATE": "9/1/16",
+    "SALEPRICE": "300000",
+    "lat": "40.69560771",
+    "long": "-73.7341098"
+  }]
+}

@@ -9,41 +9,56 @@
     <title>nyc-real-estate</title>
    
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="./dist/main.js"></script>
+   
     <script
-        async defer
-        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD0YO7BiK4O-cnzBJjyz9LdQAv7oorJVBU&callback=initMap'></script>
+      
+        
+        src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD0YO7BiK4O-cnzBJjyz9LdQAv7oorJVBU'></script>
+        <script src="./dist/main.js"></script>
+        
         <style>
-           html, body, #map {
-                width: 100%;
+           html,body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            }
+
+            #map {
                 height: 100%;
-                margin: 0;
-                padding: 0;
+                width: 100%;
+                /* position: absolute; */
+            }
+            .stations, .stations svg {
+                position: absolute;
+                top: 0;
+                left: 0;
                 }
 
+            .stations svg {
+            /* width: 60px;
+            height: 20px;
+            padding-right: 100px; */
+            font: 10px sans-serif;
+            }
+
+            .stations circle {
+            fill: brown;
+            stroke: black;
+            stroke-width: 1.5px;
+            }
+            
+
+        
         </style>
 </head>
 
 <body>
-    <!-- <div>
-        <div class="left-piece">
-    
-            <div classe="profile-links">
-    
-            </div>
-    
-        </div>
-    
-        <div class="right-piece"> -->
-    
-            <div id="map">
-    
-            </div>
-    
-        <!-- </div>
-    
-     </div> -->
 
+    <div id="map">
+    
+    </div>
+
+       
     
 
 </body>
