@@ -5,118 +5,230 @@ document.addEventListener("DOMContentLoaded", ()=>{
     window.address_lat_lng = [];
     let map;
     let overlay;
+    const json_obj = require('../properties.json');
+    let sep_arr = [];
+    let oct_arr = [];
+    let nov_arr = [];
+    let dec_arr = [];
+    let jan_arr = [];
+    let feb_arr = [];
+    let march_arr = [];
+    let april_arr = [];
+    let may_arr = [];
+    let june_arr = [];
+    let july_arr = [];
+    let aug_arr = [];
 
-
-    d3.csv("./src/assets/output2.csv").then(function (data) {
-
-        data.forEach((row) => {
-
-            let new_obj = {}
-            new_obj["ADDRESS"] = row["ADDRESS"];
-            new_obj["SALEDATE"] = row["SALE DATE"];
-            new_obj["SALEPRICE"] = row["SALE PRICE"];
-            new_obj["lat"] = row["lat"];
-            new_obj["long"] = row["long"];
-
-            window.arr.push(new_obj);
-
-        })
-
-        for (let i = 0; i < 100; i++) {
-            window.address_lat_lng.push(window.arr[i]);
-
-
+    for(let i =0; i<json_obj.properties.length; i++){
+        
+        
+        if (json_obj.properties[i].SALEDATE.startsWith("9/")){
+            sep_arr.push(json_obj.properties[i]);
         }
-    });
+        else if (json_obj.properties[i].SALEDATE.startsWith("10")) {
+            oct_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("11")) {
+            nov_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("12")) {
+            dec_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("1/")) {
+            jan_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("2/")) {
+            feb_arr.push(json_obj.properties[i]);
+        }
+        else if (json_obj.properties[i].SALEDATE.startsWith("3/")) {
+            march_arr.push(json_obj.properties[i]);
+        }
+        else if (json_obj.properties[i].SALEDATE.startsWith("4/")) {
+            april_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("5/")) {
+            may_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("6/")) {
+            june_arr.push(json_obj.properties[i]);
+        }
+        else if (json_obj.properties[i].SALEDATE.startsWith("7/")) {
+            july_arr.push(json_obj.properties[i]);
+        }
 
+        else if (json_obj.properties[i].SALEDATE.startsWith("8/")) {
+            aug_arr.push(json_obj.properties[i]);
+        }        
+    }
+    
+    sep_arr = sep_arr.slice(0, 200);
+    oct_arr = oct_arr.slice(0, 200);
+    nov_arr = nov_arr.slice(0, 200);
+    dec_arr = dec_arr.slice(0, 200);
+    jan_arr = jan_arr.slice(0, 200);
+    feb_arr = feb_arr.slice(0, 200);
+    march_arr = march_arr.slice(0, 200);
+    april_arr = april_arr.slice(0, 200);
+    may_arr = may_arr.slice(0, 200);
+    june_arr = june_arr.slice(0, 200);
+    july_arr = july_arr.slice(0, 200);
+    aug_arr = aug_arr.slice(0, 200)
+    let animation = ["sep_arr", "oct_arr", "nov_arr", "dec_arr", "jan_arr", "feb_arr",
+        "march_arr", "april_arr", "may_arr", "june_arr", "july_arr", "aug_arr"];
 
-
-    // });
-
-
-    // window.initMap = () => {
-
-    // let bound = new google.maps.LatLngBounds();
-    // for (d in window.address_lat_lng ){
-    //     long = +window.address_lat_lng[d].long;
-    //     lat = +window.address_lat_lng[d].lat;
-    //     // bound.extend(new google.maps.LatLngBounds(lat,long));
-
-
-    // }
-
+    
 
         map = new window.google.maps.Map(d3.select("#map").node(), {
             zoom: 12,
             center: { lat: 40.730610, lng: -73.935242 },
         });
         window.map = map;
+    var inputValue = null;
+    var month = ["Sep'16", "Oct'16", "Nov'16", "Dec'16", "Jan'17", "Feb'17", "Mar'17", "Apr'17", "May'17", "Jun'17", "Jul'17", "Aug'17"];
+    d3.select("#timeslide").on("input", function () {
+        update(+this.value);
+    });
+    layers(sep_arr);
+
+    
+
+    
+    function update(value) {
+        document.getElementById("range").innerHTML = month[value];
+        inputValue = month[value];
+       
+        let arg;
+        if (inputValue.startsWith("Sep'16")) {
+            arg= sep_arr;
+        }
+        else if (inputValue.startsWith("Oct'16")) {
+           
+            arg = oct_arr;
+        }
+        else if (inputValue.startsWith("Nov'16")) {
+            arg = nov_arr;
+        }
+        else if (inputValue.startsWith("Dec")) {
+            arg = dec_arr;
+        }
+        else if (inputValue.startsWith("Jan")) {
+            arg = jan_arr;
+        }
+        else if (inputValue.startsWith("Feb")) {
+            arg = feb_arr;
+        }
+        else if (inputValue.startsWith("Mar")) {
+            arg = march_arr;
+        }
+        else if (inputValue.startsWith("Apr")) {
+            arg = april_arr;
+        }
+        else if (inputValue.startsWith("May")) {
+            arg = may_arr;
+        }
+        else if (inputValue.startsWith("Jun")) {
+            arg = june_arr;
+        }
+        else if (inputValue.startsWith("Jul")) {
+            arg = july_arr;
+        }
+        else if (inputValue.startsWith("Aug")) {
+            arg = aug_arr;
+        }
+    
+        layers(arg);
+    }
+
+
+
+    
         
-    // }
-    //   map.fitBounds(bound);
-    // window.initMap();
-
-    d3.json('./properties2.json').then(function (error,data) {
-        overlay = new google.maps.OverlayView();
-        // debugger
-        overlay.onAdd = function () {
+    
+    function layers(arg){
+        d3.json('./properties2.json').then(function (error, data) {
+            overlay = new google.maps.OverlayView();
             // debugger
-            let layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "stations");
-            // debugger
-            overlay.draw = function () {
-                const projection = this.getProjection(),
-                    padding = 50;
-
+            overlay.onAdd = function () {
                 // debugger
-                let marker = layer.selectAll("svg")
-                    .data(d3.entries(window.address_lat_lng))
-                    .each(transform)
-                    .enter()
-                    .append("svg")
-                    .each(transform)
-                    .attr("class", "marker")
+                d3.select(".stations").remove();
                 // debugger
+                let layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "stations");
+                // debugger
+                overlay.draw = function () {
+                    const projection = this.getProjection(),
+                        padding = 50;
 
-                marker.append("circle")
-                    .attr("r", 4.5)
-                    .attr("cx", padding)
-                    .attr("cy", padding);
+                    let marker = layer.selectAll("svg")
+                        .data(d3.entries(arg))
+                        .each(transform)
+                        .enter()
+                        .append("svg")
+                        .each(transform)
+                        .attr("class", "marker")
 
-                marker.append("text")
-                    .attr("x", padding + 7)
-                    .attr("y", padding)
-                    .attr("dy", ".31em")
-                
-                    .text(function (d) { 
-                        
-                        return d.key; });
-                
-                function transform(d) {
-                    // debugger
-                    d = new google.maps.LatLng(parseFloat(d.value.lat), parseFloat(d.value.long));
-                    d = projection.fromLatLngToDivPixel(d);
-                    // debugger
-                    return d3.select(this)
-                        .style("left", (d.x - padding) + "px")
-                        .style("top", (d.y - padding) + "px");
+                    marker.append("circle")
+                        .attr("r", 4.5)
+                        .attr("cx", padding)
+                        .attr("cy", padding);
+
+                    marker.append("text")
+                        .attr("x", padding + 7)
+                        .attr("y", padding)
+                        .attr("dy", ".31em")
+
+                        .text(function (d) {
+
+                            return d.key;
+                        });
+                   
+                    function transform(d) {
+
+                      
+                        d = new google.maps.LatLng(parseFloat(d.value.lat), parseFloat(d.value.long));
+                        d = projection.fromLatLngToDivPixel(d);
+                        // debugger
+                        return d3.select(this)
+                            .style("left", (d.x - padding) + "px")
+                            .style("top", (d.y - padding) + "px");
+                    }
                 }
             }
-            // debugger
+
+            overlay.setMap(map);
+
+
+
+
+        });
+
+    }
+
+    function sleep(miliseconds) {
+        var currentTime = new Date().getTime();
+
+        while (currentTime + miliseconds >= new Date().getTime()) {
         }
-        // debugger
-        overlay.setMap(map);
+    }
 
-        
-        
+    d3.select("animation").on("click", function () {
+        console.log("hello");
+    })
+    
 
-    });
+    // for(let i=0; i<animation.length; i++){
+    //     sleep(10000)
+    //     layers(animation[i]);
+    // }
 
+    
+
+    
 })
 
 

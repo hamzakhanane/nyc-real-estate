@@ -1,13 +1,34 @@
 .main-container{
+    height: 100%;
+    width: 100%;
     display: flex;
-
+    justify-content: center;
 }
 
 .map-container{
-    width: 50%;
-    height: 100%;
+    width: 75%;
+    
 }
+
+
 .left-container{
-    width: 50%;
-    height: 100%;
+
+    width: 25%;
+
 }
+
+#sliderContainer {
+    text-align: center;
+    position: relative;
+    top: 600px;
+}
+
+.range-bar{
+    color: black;
+    /* transform: rotate(450deg); */
+    width: 250px;
+}
+
+
+
+
