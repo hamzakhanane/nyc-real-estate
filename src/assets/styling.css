@@ -13,6 +13,7 @@
 
 .left-container{
 
+    background-color: #042f4b;
     width: 25%;
 
 }
@@ -24,7 +25,7 @@
 }
 
 .range-bar{
-    color: black;
+    color:white;
     /* transform: rotate(450deg); */
     width: 250px;
 }
@@ -32,13 +33,18 @@
 .info{
     font-family: sans-serif;
    
-    background-color: #fff;
+    background-color: #d59563;
     box-sizing: border-box;
     border-color: #f4f4f5;
     padding: 0 24px;
     position: relative;
-    box-shadow: 0 0 4px 1px whitesmoke, 0 3px 24px whitesmoke;
+    /* box-shadow: 0 0 4px 1px whitesmoke, 0 3px 24px whitesmoke; */
     border-radius: 4px;
+}
+
+.text-slider{
+    color: #6e2142;
+    font-weight: 700;
 }
 
 

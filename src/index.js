@@ -67,18 +67,18 @@ document.addEventListener("DOMContentLoaded", ()=>{
         }        
     }
     
-    sep_arr = sep_arr.slice(0, 200);
-    oct_arr = oct_arr.slice(0, 200);
-    nov_arr = nov_arr.slice(0, 200);
-    dec_arr = dec_arr.slice(0, 200);
-    jan_arr = jan_arr.slice(0, 200);
-    feb_arr = feb_arr.slice(0, 200);
-    march_arr = march_arr.slice(0, 200);
-    april_arr = april_arr.slice(0, 200);
-    may_arr = may_arr.slice(0, 200);
-    june_arr = june_arr.slice(0, 200);
-    july_arr = july_arr.slice(0, 200);
-    aug_arr = aug_arr.slice(0, 200)
+    sep_arr = sep_arr.slice(0, 300);
+    oct_arr = oct_arr.slice(0, 300);
+    nov_arr = nov_arr.slice(0, 300);
+    dec_arr = dec_arr.slice(0, 300);
+    jan_arr = jan_arr.slice(0, 300);
+    feb_arr = feb_arr.slice(0, 300);
+    march_arr = march_arr.slice(0, 300);
+    april_arr = april_arr.slice(0, 300);
+    may_arr = may_arr.slice(0, 300);
+    june_arr = june_arr.slice(0, 300);
+    july_arr = july_arr.slice(0, 300);
+    aug_arr = aug_arr.slice(0, 300)
     let animation = [sep_arr, oct_arr, nov_arr, dec_arr, jan_arr, feb_arr,
         march_arr, april_arr, may_arr, june_arr, july_arr, aug_arr];
 
@@ -87,6 +87,87 @@ document.addEventListener("DOMContentLoaded", ()=>{
         map = new window.google.maps.Map(d3.select("#map").node(), {
             zoom: 12,
             center: { lat: 40.730610, lng: -73.935242 },
+            //style array taken from https://developers.google.com/maps/documentation/javascript/styling
+            styles: [
+                { elementType: 'geometry', stylers: [{ color: '#242f3e' }] },
+                { elementType: 'labels.text.stroke', stylers: [{ color: '#242f3e' }] },
+                { elementType: 'labels.text.fill', stylers: [{ color: '#746855' }] },
+                {
+                    featureType: 'administrative.locality',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'poi',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#263c3f' }]
+                },
+                {
+                    featureType: 'poi.park',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#6b9a76' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#38414e' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ color: '#212a37' }]
+                },
+                {
+                    featureType: 'road',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#9ca5b3' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#746855' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'geometry.stroke',
+                    stylers: [{ color: '#1f2835' }]
+                },
+                {
+                    featureType: 'road.highway',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#f3d19c' }]
+                },
+                {
+                    featureType: 'transit',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#2f3948' }]
+                },
+                {
+                    featureType: 'transit.station',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#d59563' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'geometry',
+                    stylers: [{ color: '#17263c' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.fill',
+                    stylers: [{ color: '#515c6d' }]
+                },
+                {
+                    featureType: 'water',
+                    elementType: 'labels.text.stroke',
+                    stylers: [{ color: '#17263c' }]
+                }
+            ]
         });
         window.map = map;
     var inputValue = null;
@@ -172,12 +253,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                         .append("svg")
                         .each(transform)
                         .attr("class", "marker")
-                        
                     
-                    
-                   
-
-
                     marker.append("circle")
                         .attr("r", 4.5)
                         .attr("cx", padding)
@@ -186,17 +262,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     
 
 
-                    marker.append("text")
-                        .attr("x", padding + 7)
-                        .attr("y", padding)
-                        .attr("dy", ".31em")
-                    
-                    
+                    // marker.append("text")
+                    //     .attr("x", padding + 7)
+                    //     .attr("y", padding)
+                    //     .attr("dy", ".31em")
+                
+                    //     .text(function (d) {
 
-                        .text(function (d) {
-
-                            return d.key;
-                        });
+                    //         return d.key;
+                    //     });
                    
                     function transform(d) {
 
@@ -217,9 +291,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                 .append("p").text(`
                                     Sales Price: $${salesPrice}`)
                                 .append("p").text(`
-                                    Address: ${address}`)
-                                
-                                
+                                    Address: ${address}`)        
                             }
                                 );
                     }
