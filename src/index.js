@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
     june_arr = june_arr.slice(0, 200);
     july_arr = july_arr.slice(0, 200);
     aug_arr = aug_arr.slice(0, 200)
-    let animation = ["sep_arr", "oct_arr", "nov_arr", "dec_arr", "jan_arr", "feb_arr",
-        "march_arr", "april_arr", "may_arr", "june_arr", "july_arr", "aug_arr"];
+    let animation = [sep_arr, oct_arr, nov_arr, dec_arr, jan_arr, feb_arr,
+        march_arr, april_arr, may_arr, june_arr, july_arr, aug_arr];
 
     
 
@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         
     
     function layers(arg){
+        
         d3.json('./properties2.json').then(function (error, data) {
             overlay = new google.maps.OverlayView();
             // debugger
@@ -158,7 +159,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 // debugger
                 d3.select(".stations").remove();
                 // debugger
-                let layer = d3.select(this.getPanes().overlayLayer).append("div").attr("class", "stations");
+                let layer = d3.select(this.getPanes().overlayMouseTarget).append("div").attr("class", "stations");
                 // debugger
                 overlay.draw = function () {
                     const projection = this.getProjection(),
@@ -171,16 +172,26 @@ document.addEventListener("DOMContentLoaded", ()=>{
                         .append("svg")
                         .each(transform)
                         .attr("class", "marker")
+                        
+                    
+                    
+                   
+
 
                     marker.append("circle")
                         .attr("r", 4.5)
                         .attr("cx", padding)
                         .attr("cy", padding);
 
+                    
+
+
                     marker.append("text")
                         .attr("x", padding + 7)
                         .attr("y", padding)
                         .attr("dy", ".31em")
+                    
+                    
 
                         .text(function (d) {
 
@@ -189,13 +200,28 @@ document.addEventListener("DOMContentLoaded", ()=>{
                    
                     function transform(d) {
 
-                      
+                        let salesPrice = d.value.SALEPRICE;
+                        let  address = d.value.ADDRESS;
+                        let salesDate = d.value.SALEDATE;
                         d = new google.maps.LatLng(parseFloat(d.value.lat), parseFloat(d.value.long));
                         d = projection.fromLatLngToDivPixel(d);
                         // debugger
                         return d3.select(this)
                             .style("left", (d.x - padding) + "px")
-                            .style("top", (d.y - padding) + "px");
+                            .style("top", (d.y - padding) + "px")
+                            .on("click", function () {
+                                d3.select(".info").selectAll("p").remove(); 
+                                d3.select(".info")
+                                .append("p").text(`
+                                    Sales Date: ${salesDate}`)
+                                .append("p").text(`
+                                    Sales Price: $${salesPrice}`)
+                                .append("p").text(`
+                                    Address: ${address}`)
+                                
+                                
+                            }
+                                );
                     }
                 }
             }
@@ -209,22 +235,8 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     }
 
-    function sleep(miliseconds) {
-        var currentTime = new Date().getTime();
-
-        while (currentTime + miliseconds >= new Date().getTime()) {
-        }
-    }
-
-    d3.select("animation").on("click", function () {
-        console.log("hello");
-    })
     
-
-    // for(let i=0; i<animation.length; i++){
-    //     sleep(10000)
-    //     layers(animation[i]);
-    // }
+   
 
     
 
