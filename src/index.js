@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                 document.getElementById("info-id").style.display = "block"
                                 d3.select(".info")
                                 .append("p").text(`
-                                    ${address}`) 
+                                    ${address}`)
                                 .append("p").text(`
                                     Sales Date: ${salesDate}`)
                                 .append("p").text(`
