@@ -1,5 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
+    document.getElementById("info-id").style.display="none";
     window.arr = [];
 
     window.address_lat_lng = [];
@@ -285,13 +286,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
                             .style("top", (d.y - padding) + "px")
                             .on("click", function () {
                                 d3.select(".info").selectAll("p").remove(); 
+                                document.getElementById("info-id").style.display = "block"
                                 d3.select(".info")
+                                .append("p").text(`
+                                    ${address}`)  
                                 .append("p").text(`
                                     Sales Date: ${salesDate}`)
                                 .append("p").text(`
                                     Sales Price: $${salesPrice}`)
-                                .append("p").text(`
-                                    Address: ${address}`)        
+                                
                             }
                                 );
                     }
