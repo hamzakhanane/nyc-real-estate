@@ -17,13 +17,17 @@
     width: 25%;
 
 }
+.logo-container{
+    display: flex;
+    flex-direction: column;
+}
 
 #sliderContainer {
     text-align: center;
     position: relative;
-    top: 350px;
+    top: 500px;
     right: 40px;
-     margin-left: 4%;
+    margin-left: 4%;
 }
 
 
@@ -36,7 +40,7 @@
 .info{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
-   color: whitesmoke;
+    color: whitesmoke;
     background-color:#042f4b;
     box-sizing: border-box;
     border: 4px solid;
@@ -46,18 +50,60 @@
     /* box-shadow: 0 0 4px 1px whitesmoke, 0 3px 24px whitesmoke; */
     border-radius: 4px;
     margin-left: 4%;
-    margin-top: 20%;
+    margin-top: 30%;
+    margin-bottom: 2%;
     width: 350px;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 15px;
+    /* padding-bottom: 35px; */
     
 }
 
+.info2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 125px;
+    color: whitesmoke;
+    background-color:#042f4b;
+    box-sizing: border-box;
+    border: 4px solid;
+    border-color: black;
+    padding: 0 24px;
+    position: relative;
+    /* box-shadow: 0 0 4px 1px whitesmoke, 0 3px 24px whitesmoke; */
+    border-radius: 4px;
+    margin-left: 0%;
+    /* margin-top: 8%; */
+    width: 350px;
+    padding-top: -5px;
+    padding-bottom: 35px;
+    
+}
+.highest_avg_price{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    background-color:#042f4b;
+    box-sizing: border-box;
+    border: 4px solid;
+    border-color: black;
+    padding: 0 24px;
+    position: relative;
+    /* box-shadow: 0 0 4px 1px whitesmoke, 0 3px 24px whitesmoke; */
+    border-radius: 4px;
+    margin-left: 4%;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    width: 350px;
+    padding-top: 20px;
+    height: 70px;
+}
+
+
 .heading{
-    width: 420px;
+    border: 4px solid;
+    border-color: black;
+    width: 432px;
     display: flex;
     justify-content: center;
-
+    color: white;
     background-color: #042f4b;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
@@ -66,8 +112,9 @@
 }
 .logos{
     margin-top: 2%;
-    margin-left: 4%;
+    margin-left: 2%;
     justify-content: space-evenly;
+    display: flex;
 }
 .text-slider{
     color: #042f4b;

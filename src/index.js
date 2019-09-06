@@ -1,6 +1,8 @@
 
 document.addEventListener("DOMContentLoaded", ()=>{
     document.getElementById("info-id").style.display="none";
+   
+    
     window.arr = [];
 
     window.address_lat_lng = [];
@@ -80,6 +82,21 @@ document.addEventListener("DOMContentLoaded", ()=>{
     june_arr = june_arr.slice(0, 300);
     july_arr = july_arr.slice(0, 300);
     aug_arr = aug_arr.slice(0, 300)
+    let sep_max_price = Math.max.apply(Math, sep_arr.map(function (o) { return o.SALEPRICE; }));
+    let oct_max_price = Math.max.apply(Math, oct_arr.map(function (o) { return o.SALEPRICE; }));
+    let nov_max_price = Math.max.apply(Math, nov_arr.map(function (o) { return o.SALEPRICE; }));
+    let dec_max_price = Math.max.apply(Math, dec_arr.map(function (o) { return o.SALEPRICE; }));
+    let jan_max_price = Math.max.apply(Math, jan_arr.map(function (o) { return o.SALEPRICE; }));
+    let feb_max_price = Math.max.apply(Math, feb_arr.map(function (o) { return o.SALEPRICE; }));
+    let march_max_price = Math.max.apply(Math, march_arr.map(function (o) { return o.SALEPRICE; }));
+    let april_max_price = Math.max.apply(Math, april_arr.map(function (o) { return o.SALEPRICE; }));
+    let may_max_price = Math.max.apply(Math, may_arr.map(function (o) { return o.SALEPRICE; }));
+    let june_max_price = Math.max.apply(Math, june_arr.map(function (o) { return o.SALEPRICE; }));
+    let july_max_price = Math.max.apply(Math, july_arr.map(function (o) { return o.SALEPRICE; }));
+    let aug_max_price = Math.max.apply(Math, aug_arr.map(function (o) { return o.SALEPRICE; }));
+    // let sep_arr_prices = sep_arr.map(a => a.SALEPRICE);
+
+    
     let animation = [sep_arr, oct_arr, nov_arr, dec_arr, jan_arr, feb_arr,
         march_arr, april_arr, may_arr, june_arr, july_arr, aug_arr];
 
@@ -177,6 +194,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
         update(+this.value);
     });
     layers(sep_arr);
+    document.getElementById("highest-price-val").innerHTML = sep_max_price.toLocaleString('en')
 
     
     
@@ -190,40 +208,51 @@ document.addEventListener("DOMContentLoaded", ()=>{
         let arg;
         if (inputValue.startsWith("Sep'16")) {
             arg= sep_arr;
+            document.getElementById("highest-price-val").innerHTML = sep_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Oct'16")) {
-           
             arg = oct_arr;
+            document.getElementById("highest-price-val").innerHTML = oct_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Nov'16")) {
             arg = nov_arr;
+            document.getElementById("highest-price-val").innerHTML = nov_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Dec")) {
             arg = dec_arr;
+            document.getElementById("highest-price-val").innerHTML = dec_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Jan")) {
             arg = jan_arr;
+            document.getElementById("highest-price-val").innerHTML = jan_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Feb")) {
             arg = feb_arr;
+            document.getElementById("highest-price-val").innerHTML = feb_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Mar")) {
             arg = march_arr;
+            document.getElementById("highest-price-val").innerHTML = march_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Apr")) {
             arg = april_arr;
+            document.getElementById("highest-price-val").innerHTML = april_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("May")) {
             arg = may_arr;
+            document.getElementById("highest-price-val").innerHTML = may_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Jun")) {
             arg = june_arr;
+            document.getElementById("highest-price-val").innerHTML = june_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Jul")) {
             arg = july_arr;
+            document.getElementById("highest-price-val").innerHTML = july_max_price.toLocaleString('en');
         }
         else if (inputValue.startsWith("Aug")) {
             arg = aug_arr;
+            document.getElementById("highest-price-val").innerHTML = aug_max_price.toLocaleString('en');
         }
     
         layers(arg);
@@ -261,19 +290,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
                         .attr("r", 4.5)
                         .attr("cx", padding)
                         .attr("cy", padding);
-
-                    
-
-
-                    // marker.append("text")
-                    //     .attr("x", padding + 7)
-                    //     .attr("y", padding)
-                    //     .attr("dy", ".31em")
-                
-                    //     .text(function (d) {
-
-                    //         return d.key;
-                    //     });
                    
                     function transform(d) {
 
@@ -304,9 +320,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
             }
 
             overlay.setMap(map);
-
-
-
 
         });
 
