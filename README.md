@@ -8,9 +8,11 @@
  
  In NYC RealEstate, users will be able to:
 
-  * start an animation of historical real estate sales in nyc
+  * view properties in a specific time frame of months
   * view markers popping up over a period of time on google maps
   * select specific areas, zoom-in/zoom-out on google maps
+  * view highest price of property sold in every month
+  * view property information of every marker on google maps
   
  
  ## Wireframes 
